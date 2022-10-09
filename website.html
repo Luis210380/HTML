@@ -1,0 +1,86 @@
+<style>
+  .button1{                               /*using . you can modify only one element of the page*/
+    background-color: rgb(179, 27, 27);
+    color: white;
+    border: none;
+    height: 26px;
+    width: 105px;
+    border-radius: 5px;
+    cursor: wait;
+    margin-right: 8px;            /* pixel to margin for outside the button*/
+    transition: opacity 1s;
+    transition: font-size 1s;
+    position: relative; left: 80px; top: 50px;
+  }  
+  .button1:hover{                 /*function to change the apperance of the button when the cursor is over it*/
+    font-size: 16px;
+    opacity: 0.7;               /*level of opacity in the button*/
+  }
+  .button1:active{            /*function to change the apperance of the button when its click o it*/
+    background-color: blue;
+    width: 120px;
+    font-style: italic;
+  }
+  .button2{                               /*using . you can modify only one element of the page*/
+    background-color: rgb(54, 45, 172);
+    color: white;
+    border: solid;
+    height: 26px;
+    width: 105px;
+    border-radius: 5px;
+    cursor: zoom-in;
+    font-weight:bold;  
+    padding-left: 20px;           /*margin text inside the button*/    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;      
+    position: relative; left: 100px; top: 50px;
+  }
+  .button2:hover{
+    background-color: white;
+    color: rgb(54, 45, 172);
+    box-shadow: 2px 2px 10px rgba(109, 126, 204, 1);      /*Shadow in a button*/
+  }
+  p.title{
+    width: 250px;
+    line-height: 40px;                    /*Interline between the lines of a paragraph*/
+    font-size: 40px;
+    position: absolute; left: 550px; top: -10px;
+  }
+  a.link1{
+    font-size: 12px;
+    position: absolute; left: 600px; top: 110px;
+  }
+</style>
+<body>
+  <button class="button1"; onclick="myfunction()">                  <!instruction to build a button Class is the tag of the button and onclick call the function when there is a on the button> 
+    PIO
+  </button> 
+  <button class="button2">
+    MARA
+  </button> 
+  <p class="title">                       <!build a paragraph text>
+    Hello We are Pio and Mara
+  </p>   
+  <a class= "link1" href="https://spaceluis1256.w3spaces.com/test0.html" target="_blank">
+    Pio & Mara WebSite               <!open the link in other window> 
+  </a> 
+  <input type="text" id="textField1">
+  <input type="button" onclick="textChecker()" value="Submit">
+</body>
+<script>
+  function myfunction() {
+  alert("Hello how are you doing?");              //alert is a method to open a warning window in the website
+}
+function showtime() {                             //function to show the current date in the browser as a alert window
+  var now = new Date();
+  alert(now);
+}
+function textChecker(){
+  var textField1 = document.getElementById("textField1");
+  if (textField1.value == ""){
+    alert("Please type your name");
+  }
+  else{
+    alert("Your name is: " + textField1.value);
+  }
+} 
+</script>
