@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<h1>This is the First Test in HTML</h1>						 <!add Titles>
+<h2>Autor: Luis Armando Carvajal</h2>
+<img src="images/PHOENIX0.jpg" alt="W3Schools.com" width="240" height="288"><br> <!add images from the root of the web page>
+<a href="https://phoenix.com.co/">Phoenix Web Page</a>				 <!add web url>
+<p>Date: 22 Sept 2022</p>						     	 <!add paragraphs>
+
+<input id="name1" type="text">
+<input id="age1" type="number">
+<input id="name2" type="text">
+<input id="age2" type="number">
+<button type="button" onclick="myFunction()">Enter</button>
+<p id="p01"></p>
+</body>
+</html>
+<style>
+h1 {
+text-align: left;
+font-size: 24px;
+}
+h2 {
+text-align: right;
+}
+a{
+color: green;
+}
+body {
+  font-family: system-ui;
+  background: #f06d06;
+  color: black;
+  text-align: center;
+}
+</style>
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let name1 = document.getElementById("name1").value;
+  let name2 = document.getElementById("name2").value;
+  let age1 = document.getElementById("age1").value;
+  let age2 = document.getElementById("age2").value;
+  try { 
+    if(name1 == "")  throw "empty";
+    throw "the name is:" + name1;
+  }
+    try { 
+    if(age1 == "")  throw "empty";
+    if(isNaN(age1)) throw "not a number";
+    x = Number(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+
+

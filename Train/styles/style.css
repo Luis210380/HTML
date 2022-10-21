@@ -1,0 +1,25 @@
+
+  .profile{
+    width: 200px;
+    background-color: white;
+  }
+  table {
+    margin: .3em;
+    width: 290px;
+    border: 2px solid black;
+  }
+  
+  th {
+    padding: .2em;
+  }
+  
+  td {
+    padding-left: .5em;
+    padding-right: .5em;
+    border: 1px solid #900;
+    background-color: #ffc;
+    text-align: center;
+  }
+  body {
+    background-color: rgb(204, 233, 233);
+  }
