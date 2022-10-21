@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Contact details </title>
+    <script src = “/source/script.js” > </script> <! to include a external script file in HTML>
+    <script type="application/javascript">
+      function checkdata(){
+        var userName = document.getElementById("name");
+        var userEmail = document.getElementById("email");
+        if(userName.value ==""){
+          alert("Please enter the name");
+          userName.focus();
+          return false;
+        }
+        if(userEmail.value = ""){
+          alert("Please enter a email address")
+          userEmail.focus();
+          return false;
+        }
+        //alert("Form validation is successful.")
+        //return true;
+        console.log("Form validation is successful")
+      }
+    </script>
+  </head>
+  <body>
+    <h2> Enter your contact details</h2>
+    <form id="form1" onsubmit="return checkdata()">
+      <label for="name">Name : </label>
+      <input type="text" id="name" name="name"><br><br>
+      <label type="email">E-mail ID: </label>
+      <input type="text" id="email" name="email"><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+</html>
